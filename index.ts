@@ -34,9 +34,26 @@ sayWord();
 // sayWord(3 + '');
 
 // Implicit types
-let newName = 'Chas';
+let newName: string | number = 'Chas';
 newName = 'Harry';
 newName = 10;
 
 let newNameTwo = newName;
 newNameTwo = 10;
+
+// Union Types with '|'
+const makeMargin = (x: string | number): string => {
+  return `margin: ${x}px`;
+};
+
+makeMargin(10);
+makeMargin('Bob');
+
+// Null types
+let dog: string | null = 'Sammy';
+dog = null;
+console.log(dog);
+dog = 'Lucy';
+dog = undefined;
+dog = 10;
+dog = true;
