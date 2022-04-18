@@ -57,3 +57,17 @@ dog = 'Lucy';
 dog = undefined;
 dog = 10;
 dog = true;
+
+// Interfaces
+interface Person {
+  name: string;
+  age?: number; // optional with ?
+}
+
+const sayName = ({ name, age }: Person): string => {
+  console.log(name);
+  return name;
+};
+
+sayName({ age: 32, name: 'Bob' });
+sayName({ name: 'Bob', age: 32 });
