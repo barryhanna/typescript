@@ -1,4 +1,4 @@
-import Job, { Person, Type2 } from './src/interfaces';
+import Job, { Person, Type2 } from './interfaces';
 
 const isOpen: boolean = false;
 const userName: string = 'Baz';
@@ -51,8 +51,8 @@ dog = null;
 console.log(dog);
 dog = 'Lucy';
 dog = undefined;
-dog = 10;
-dog = true;
+// dog = 10;
+// dog = true;
 
 // Interfaces
 // interface Person {
@@ -79,14 +79,14 @@ enum Type {
 
 const createContent = (contentType: Type) => {};
 
-createContent('Video');
+// createContent('Video');
 createContent(Type.Video);
 
 console.log(Type.Quiz);
 
 const createContent2 = (contentType: Type2) => {};
 
-createContent2('Video');
+// createContent2('Video');
 createContent2(Type2.Video);
 
 console.log(Type2.Quiz);
