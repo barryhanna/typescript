@@ -1,14 +1,10 @@
+import Job, { Person, Type2 } from './src/interfaces';
+
 const isOpen: boolean = false;
 const userName: string = 'Baz';
 const myAge: number = 40;
 const list: number[] = [0, 1, 2, 4, 5];
 const me: [string, number, boolean] = ['Baz', 40, false];
-
-enum Job {
-  WebDev,
-  WebDesigner,
-  PM,
-}
 
 const job: Job = Job.WebDesigner;
 
@@ -59,10 +55,10 @@ dog = 10;
 dog = true;
 
 // Interfaces
-interface Person {
-  name: string;
-  age?: number; // optional with ?
-}
+// interface Person {
+//   name: string;
+//   age?: number; // optional with ?
+// }
 
 const sayName = ({ name, age }: Person): string => {
   console.log(name);
@@ -87,13 +83,6 @@ createContent('Video');
 createContent(Type.Video);
 
 console.log(Type.Quiz);
-
-// String enums
-enum Type2 {
-  Video = 'VIDEO',
-  BlogPost = 'BLOG_POST', // 1
-  Quiz = 'QUIZ', //2
-}
 
 const createContent2 = (contentType: Type2) => {};
 
