@@ -101,3 +101,26 @@ createContent2('Video');
 createContent2(Type2.Video);
 
 console.log(Type2.Quiz);
+
+// Classes
+
+class Team {
+  teamName: string;
+  // public teamName: string; <- same as above
+  // private teamName: string; <- prevents outside usage
+  // readonly teamName: string; <- prevents from being changed
+
+  constructor(teamName) {
+    this.teamName = teamName;
+  }
+
+  score(): string {
+    this.teamName = 'changing';
+    console.log(this.teamName);
+    return 'goal!';
+  }
+}
+
+const redWings = new Team('Red Wings');
+redWings.score();
+redWings.teamName;
