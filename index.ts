@@ -16,10 +16,19 @@ const phone: any = 'Pixel';
 const tablet: any = 3;
 
 // TypeScript Functions
-const sayWord = (word: string): string => {
+// const sayWord = (word?: string): string => {
+//   console.log(word || 'Hello');
+//   return word || 'Hello';
+// };
+
+// Default params - type inferred from default param type
+// Rest params work as expected
+const sayWord = (word = 'Hello', ...otherStuff: string[]): string => {
   console.log(word);
+  console.log(otherStuff);
   return word;
 };
 
-sayWord('DFgre');
+sayWord('DFgre', 'Bob', 'Dave');
+sayWord();
 // sayWord(3 + '');
