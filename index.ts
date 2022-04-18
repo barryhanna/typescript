@@ -71,3 +71,33 @@ const sayName = ({ name, age }: Person): string => {
 
 sayName({ age: 32, name: 'Bob' });
 sayName({ name: 'Bob', age: 32 });
+
+// Enums
+
+// Numeric enums
+enum Type {
+  Video, // 0
+  BlogPost, // 1
+  Quiz, //2
+}
+
+const createContent = (contentType: Type) => {};
+
+createContent('Video');
+createContent(Type.Video);
+
+console.log(Type.Quiz);
+
+// String enums
+enum Type2 {
+  Video = 'VIDEO',
+  BlogPost = 'BLOG_POST', // 1
+  Quiz = 'QUIZ', //2
+}
+
+const createContent2 = (contentType: Type2) => {};
+
+createContent2('Video');
+createContent2(Type2.Video);
+
+console.log(Type2.Quiz);
