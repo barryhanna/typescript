@@ -32,3 +32,11 @@ const sayWord = (word = 'Hello', ...otherStuff: string[]): string => {
 sayWord('DFgre', 'Bob', 'Dave');
 sayWord();
 // sayWord(3 + '');
+
+// Implicit types
+let newName = 'Chas';
+newName = 'Harry';
+newName = 10;
+
+let newNameTwo = newName;
+newNameTwo = 10;
