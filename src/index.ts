@@ -99,7 +99,7 @@ class Team {
   // private teamName: string; <- prevents outside usage
   // readonly teamName: string; <- prevents from being changed
 
-  constructor(teamName) {
+  constructor(teamName: string) {
     this.teamName = teamName;
   }
 
